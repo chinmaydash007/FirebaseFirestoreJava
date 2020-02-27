@@ -79,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
+
+
 //        Task<List<QuerySnapshot>> listTask = Tasks.whenAllSuccess(querySnapshotTask1, querySnapshotTask2);
 //        listTask.addOnSuccessListener(new OnSuccessListener<List<QuerySnapshot>>() {
 //            @Override
@@ -122,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 int priority = Integer.parseInt(editText_priority.getText().toString());
                 Note note = new Note(name, number, priority);
+
                 collectionReference.add(note).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {

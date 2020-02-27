@@ -60,6 +60,7 @@ public class Main2Activity extends AppCompatActivity {
                 collectionReference.add(person).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
+                        Log.d(TAG, "onSuccess: "+documentReference);
                         Toast.makeText(Main2Activity.this, "Uploaded!!", Toast.LENGTH_SHORT).show();
                     }
                 });
